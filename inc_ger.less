@@ -1,0 +1,483 @@
+////// Include
+// Fonte
+// @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Fonte
+// @Fon001: 'Libre Baskerville';
+@Fon001: 'Raleway';
+
+// Cores
+@Cor000: #fff;
+@Cor001: #000;
+@Cor002: #a4a4a4;
+@Cor002Hov: #f6f6f6;
+
+//////////////////////////// Fontes ////////////////////////////
+// Titulo
+.Fon_Tit_001(){
+    font-size: 1.3125rem;
+}
+// Texto
+.Fon_Tex_001(){
+    font-size: 0.75rem;
+    letter-spacing: .0625rem;
+    font-weight: 600;
+}
+// Centralizador
+.Est_Cen_001(){
+    width: 100%;
+    max-width: 1630px;
+    margin: 0 auto;
+}
+.Est_Cen_002(){
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+
+//////////////////////////// Site ////////////////////////////
+body{
+    font-family: @Fon001;
+}
+.Est_Cen{
+    .Est_Cen_002(); // Centralizador
+}
+
+// Topo
+.Est_Top{
+    width: 100%;
+    padding: 32px 0;
+    background: @Cor000;
+
+    .Est_Cen{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // Logo
+    .Est_Top_Log{
+        text-transform: uppercase;
+        .Fon_Tit_001(); // Fonte
+        color: @Cor001;
+        font-weight: 700;
+        letter-spacing: .2em;
+    }
+    // Menu
+    .Est_Top_Men{
+        ul{
+            display: flex;
+            padding: 0;
+            list-style: none;
+            gap: 10px;
+
+            li{
+                .Fon_Tex_001(); // Fonte
+                text-transform: uppercase;
+                transition: all 0.3s;
+
+                &:hover{
+                    color: @Cor002;
+                }
+            }
+        }
+    }
+}
+// Banner
+.Est_Ban{
+    width: 100%;
+    .Est_Ban_Cen{
+        .Banner{
+            position: relative;
+            width: 100%;
+            height: 900px;
+            background: url('banner.png') bottom center no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &::after{
+                content:' ';
+                height: 100%;
+                width: 100%;
+                display: flex;
+                background: linear-gradient(180deg, rgba(255,255,255,0) 22%, rgba(255,255,255,1) 93%);
+            }
+        }
+    }
+}
+// Frase
+.Est_Fra{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 40px 0;
+    background: @Cor000;
+    position: absolute;
+    bottom: 30%;
+    animation: text-flicker-in-glow 4s linear both;
+
+    // Efeito
+    @keyframes text-flicker-in-glow {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        10.1% {
+          opacity: 1;
+          text-shadow: none;
+        }
+        10.2% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        20% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        20.1% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+        }
+        20.6% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        30% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        30.1% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        }
+        30.5% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        }
+        30.6% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        45% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        45.1% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        }
+        50% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        }
+        55% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+        }
+        55.1% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        57% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        57.1% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+        }
+        60% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+        }
+        60.1% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        65% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        65.1% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+        75% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+        75.1% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        77% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        77.1% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+        85% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+        85.1% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        86% {
+          opacity: 0;
+          text-shadow: none;
+        }
+        86.1% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+        100% {
+          opacity: 1;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+        }
+
+    }
+}
+
+// Teorias
+.Est_Teo{
+    width: 100%;
+    background: @Cor000;
+    padding: 20px 0 60px 0;
+    text-align: center;
+    .Est_Cen_002(); // Centralizador
+
+    h1{
+        font-size: 28px;
+        text-transform: uppercase;
+        letter-spacing: 28px;
+        font-weight: 400;
+        padding: 0 0 40px 92px;
+        margin: 0;
+    }
+
+    .Est_Teo_Lis{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+        .Teo_Ite{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+            &:hover{
+                img{
+                    transform: scale(1.2);
+                }
+            }
+
+            i{
+              color: #2a8a27;
+            }
+
+            &:nth-child(1),
+            &:nth-child(3){
+              i{
+                color: #eb4713;
+              }
+            }
+
+            img{
+                max-width: 100%;
+                width: 80px;
+                height: 80px;
+                transition: all 0.4s;
+            }
+            .Nome{
+
+            }
+            .Autor{
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            @keyframes puff-in-center {
+                0% {
+                  -webkit-transform: scale(2);
+                          transform: scale(2);
+                  -webkit-filter: blur(4px);
+                          filter: blur(4px);
+                  opacity: 0;
+                }
+                100% {
+                  -webkit-transform: scale(1);
+                          transform: scale(1);
+                  -webkit-filter: blur(0px);
+                          filter: blur(0px);
+                  opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// Cinema
+.Est_Cin{
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;
+    
+    h1{
+        font-size: 28px;
+        text-transform: uppercase;
+        letter-spacing: 28px;
+        font-weight: 400;
+        padding: 0 0 40px 92px;
+        margin: 0;
+    }
+
+    .Est_Cin_Lis{
+        display: flex;
+        justify-content: space-evenly;
+        .Est_Cen_002(); // Centralizador
+
+        .Cin_Ite{
+            width: calc(100% / 3);
+            padding: 20px;
+            position: relative;
+
+            &:hover{
+                .Info{
+                    opacity: 1;
+                }
+            }
+
+            i{
+              color: #2a8a27;
+            }
+
+            &:nth-child(1){
+              i{
+                color: #eb4713;
+              }
+            }
+
+            img{
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .Info{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background: #ffffffd1;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transition: all 0.6s;
+
+                h3{
+                    font-size: 34px;
+                    text-transform: uppercase;
+                }
+                p{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+// Paradoxos
+.Est_Par{
+    h1{
+        font-size: 28px;
+        text-transform: uppercase;
+        letter-spacing: 28px;
+        font-weight: 400;
+        padding: 0 0 20px 92px;
+        margin: 0;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+
+    .Est_Par_Lis{
+        margin: 60px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 1px;
+        background: @Cor002Hov;
+
+        .Par_Ite{
+            padding: 25px 20px;
+            text-align: center;
+            background: @Cor000;
+            color: @Cor001;
+        }
+    }
+}
+
+.Est_Lit{
+    padding: 60px 0 0 0;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(229,187,15,1) 86%);
+    display: flex;
+
+    h1{
+      text-transform: uppercase;
+      letter-spacing: 16px;
+    }
+
+    // Foto
+    .Foto{
+      // width: 50%;
+      // height: 400px;
+      // background-image: url('foto1.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment: fixed;
+    }
+    // Lista
+    .Lista{
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 10px;
+    }
+}
+
+// Video
+.Est_Vid{
+  width: 100%;
+  margin: 0 auto;
+  height: 500px;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: bottom;
+
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
